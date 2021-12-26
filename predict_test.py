@@ -36,7 +36,7 @@ def loss_function(features,labels,weights):
     loss_class1 = -labels*np.log(prediction)
     loss_class2 = -(1-labels)*np.log(1-prediction)
     loss = loss_class1+loss_class2
-    return np.sum(loss)
+    return np.sum(loss) / n
 def decisionBoundary(p) :
     if p >= 0.5 : return 1
     else: return 0
